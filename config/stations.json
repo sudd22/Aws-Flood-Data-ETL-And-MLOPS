@@ -1,0 +1,71 @@
+{
+  "config_version": 1,
+  "catchment": "River Teme",
+  "measurement": {
+    "parameter": "level",
+    "qualifier": "Stage",
+    "unit": "mASD",
+    "period_seconds": 900,
+    "datum_context": "Each station uses its own local stage datum.",
+    "measure_uri_prefix": "http://environment.data.gov.uk/flood-monitoring/id/measures/"
+  },
+  "sanity_limit_policy": {
+    "status": "provisional_engineering_limits",
+    "lower_bound_reason": "A broad -1 mASD allowance; published historic minima are not hard validity bounds.",
+    "upper_bound_reason": "Twice the larger of the Day 1 display maximum and published record maximum, rounded up.",
+    "outside_bounds_action": "Flag for review; never replace the value with zero or silently discard it."
+  },
+  "stations": [
+    {
+      "station_id": "2132",
+      "name": "Leintwardine",
+      "measure_id": "2132-level-stage-i-15_min-mASD",
+      "sanity_limits_masd": {
+        "min": -1.0,
+        "max": 6.0
+      }
+    },
+    {
+      "station_id": "2625",
+      "name": "Ludlow Teme",
+      "measure_id": "2625-level-stage-i-15_min-mASD",
+      "sanity_limits_masd": {
+        "min": -1.0,
+        "max": 12.0
+      }
+    },
+    {
+      "station_id": "2008",
+      "name": "Tenbury",
+      "measure_id": "2008-level-stage-i-15_min-mASD",
+      "sanity_limits_masd": {
+        "min": -1.0,
+        "max": 14.0
+      }
+    },
+    {
+      "station_id": "2646",
+      "name": "Stanford Bridge",
+      "measure_id": "2646-level-stage-i-15_min-mASD",
+      "sanity_limits_masd": {
+        "min": -1.0,
+        "max": 13.0
+      }
+    },
+    {
+      "station_id": "2029",
+      "name": "Knightsford Bridge",
+      "measure_id": "2029-level-stage-i-15_min-mASD",
+      "sanity_limits_masd": {
+        "min": -1.0,
+        "max": 14.0
+      }
+    }
+  ],
+  "forecast": {
+    "upstream_station_id": "2008",
+    "target_station_id": "2029",
+    "horizon_hours": 6,
+    "feature_contract_version": "1"
+  }
+}
